@@ -18,8 +18,8 @@
             background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh; /* Changed from height: 100vh */
+            overflow-x: hidden;
             position: relative;
         }
 
@@ -88,7 +88,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height: 100vh */
             padding: 20px;
             position: relative;
             z-index: 10;
@@ -287,11 +287,11 @@
             opacity: 0;
         }
 
-        /* Container for steps - Optimized for smaller layout */
+        /* Container for steps - Mobile scrollable */
         .steps-container {
             position: relative;
-            min-height: 650px; /* Reduced for smaller components */
-            overflow: hidden;
+            min-height: 650px;
+            overflow: visible; /* Allow scrolling on mobile */
         }
 
         .step-number {
@@ -370,7 +370,6 @@
             text-align: center;
             width: 100%;
             white-space: nowrap;
-            text-overflow: ellipsis;
         }
 
         .side-nav-btn::before {
@@ -657,13 +656,24 @@
             }
         }
 
-        /* Mobile Responsive - Compact Design */
+        /* Mobile Responsive - Scrollable with descriptive buttons */
         @media (max-width: 768px) {
+            body {
+                overflow-y: auto; /* Enable vertical scrolling */
+                min-height: 100vh;
+            }
+
+            .container {
+                min-height: auto; /* Remove fixed height constraint */
+                padding: 20px 10px;
+            }
+
             .journey-card {
                 padding: 25px 15px;
                 margin: 10px;
                 border-radius: 25px;
                 transform: none;
+                min-height: auto; /* Remove fixed height */
             }
             
             .journey-card:hover {
@@ -692,9 +702,10 @@
             }
             
             .side-nav-btn {
-                width: 100px;
-                padding: 10px 15px;
-                font-size: 0.8rem;
+                width: 140px; /* Wider for descriptive text */
+                padding: 12px 15px;
+                font-size: 0.85rem;
+                white-space: nowrap;
             }
             
             .photo-container {
@@ -717,7 +728,8 @@
             }
 
             .steps-container {
-                min-height: 600px;
+                min-height: auto; /* Remove fixed height constraint */
+                overflow: visible; /* Allow content to expand */
             }
 
             .step-message {
@@ -746,9 +758,9 @@
             }
             
             .side-nav-btn {
-                width: 90px;
-                padding: 8px 12px;
-                font-size: 0.75rem;
+                width: 120px;
+                padding: 10px 12px;
+                font-size: 0.8rem;
             }
             
             .photo-nav-container {
@@ -815,7 +827,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn" onclick="prevStep()" disabled>← Back</button>
+                            <button class="side-nav-btn" id="prevBtn" onclick="prevStep()" disabled>✨ Your Smile</button>
                         </div>
 
                         <!-- Photo Container -->
@@ -832,7 +844,7 @@
 
                         <!-- Next Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="nextBtn" onclick="nextStep()">Next →</button>
+                            <button class="side-nav-btn" id="nextBtn" onclick="nextStep()">See Your Beauty ➤</button>
                         </div>
                     </div>
                     <p class="step-message">
@@ -848,7 +860,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn-1" onclick="prevStep()">← Back</button>
+                            <button class="side-nav-btn" id="prevBtn-1" onclick="prevStep()">← Your Smile</button>
                         </div>
 
                         <!-- Photo Container -->
@@ -865,7 +877,7 @@
 
                         <!-- Next Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="nextBtn-1" onclick="nextStep()">Next →</button>
+                            <button class="side-nav-btn" id="nextBtn-1" onclick="nextStep()">Your Style ➤</button>
                         </div>
                     </div>
                     <p class="step-message">
@@ -881,7 +893,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn-2" onclick="prevStep()">← Back</button>
+                            <button class="side-nav-btn" id="prevBtn-2" onclick="prevStep()">← Your Beauty</button>
                         </div>
 
                         <!-- Photo Container -->
@@ -898,7 +910,7 @@
 
                         <!-- Next Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="nextBtn-2" onclick="nextStep()">Next →</button>
+                            <button class="side-nav-btn" id="nextBtn-2" onclick="nextStep()">Sweet Side ➤</button>
                         </div>
                     </div>
                     <p class="step-message">
@@ -914,7 +926,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn-3" onclick="prevStep()">← Back</button>
+                            <button class="side-nav-btn" id="prevBtn-3" onclick="prevStep()">← Your Style</button>
                         </div>
 
                         <!-- Photo Container -->
@@ -931,7 +943,7 @@
 
                         <!-- Next Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="nextBtn-3" onclick="nextStep()">Next →</button>
+                            <button class="side-nav-btn" id="nextBtn-3" onclick="nextStep()">Joyful Spirit ➤</button>
                         </div>
                     </div>
                     <p class="step-message">
@@ -947,7 +959,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn-4" onclick="prevStep()">← Back</button>
+                            <button class="side-nav-btn" id="prevBtn-4" onclick="prevStep()">← Sweet Side</button>
                         </div>
 
                         <!-- Photo Container -->
@@ -964,7 +976,7 @@
 
                         <!-- Next Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="nextBtn-4" onclick="nextStep()">Next →</button>
+                            <button class="side-nav-btn" id="nextBtn-4" onclick="nextStep()">You're Perfect ➤</button>
                         </div>
                     </div>
                     <p class="step-message">
@@ -980,7 +992,7 @@
                     <div class="photo-nav-container">
                         <!-- Previous Button -->
                         <div class="side-navigation">
-                            <button class="side-nav-btn" id="prevBtn-5" onclick="prevStep()">← Back</button>
+                            <button class="side-nav-btn" id="prevBtn-5" onclick="prevStep()">← Joyful Spirit</button>
                         </div>
 
                         <!-- Photo Container -->
