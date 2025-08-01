@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriends Day! 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated Background Elements */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: floatShape 20s infinite ease-in-out;
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 70%;
+            right: 10%;
+            animation-delay: -5s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        .floating-shape:nth-child(4) {
+            width: 180px;
+            height: 180px;
+            top: 30%;
+            right: 30%;
+            animation-delay: -15s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Main Card with Glass Effect */
+        .journey-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(30px);
+            border-radius: 40px;
+            padding: 60px;
+            max-width: 900px;
+            width: 100%;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 35px 80px rgba(0, 0, 0, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(5deg);
+            transition: all 0.3s ease;
+        }
+
+        .journey-card:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+            box-shadow: 
+                0 45px 100px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animated Border */
+        .journey-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #feca57, #48cae4, #ff6b6b);
+            background-size: 400% 400%;
+            border-radius: 40px;
+            z-index: -1;
+            animation: gradientBorder 8s ease infinite;
+        }
+
+        @keyframes gradientBorder {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #feca57, #48cae4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: gradientText 6s ease infinite, bounce 2s ease-in-out infinite;
+            text-shadow: 0 0 40px rgba(255, 107, 107, 0.5);
+            letter-spacing: -1px;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            font-weight: 300;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Enhanced Progress Indicator */
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .progress-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-dot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, #ff6b6b, #ff9ff3);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .progress-dot.active::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .progress-dot.active {
+            transform: scale(1.4);
+            box-shadow: 0 0 25px rgba(255, 107, 107, 0.8);
+        }
+
+        .progress-dot.completed {
+            background: linear-gradient(45deg, #23d5ab, #4facfe);
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(35, 213, 171, 0.6);
+        }
+
+        .progress-line {
+            height: 3px;
+            width: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-line.completed::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #23d5ab, #4facfe);
+            border-radius: 10px;
+            animation: lineProgress 0.8s ease-out;
+        }
+
+        @keyframes lineProgress {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        /* Journey Step with Smooth Transitions */
+        .journey-step {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(100px) scale(0.95);
+            transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            pointer-events: none;
+        }
+
+        .journey-step.active {
+            position: relative;
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            pointer-events: all;
+        }
+
+        .journey-step.prev {
+            transform: translateX(-100px) scale(0.95);
+            opacity: 0;
+        }
+
+        .journey-step.next {
+            transform: translateX(100px) scale(0.95);
+            opacity: 0;
+        }
+
+        /* Container for steps - Optimized for smaller layout */
+        .steps-container {
+            position: relative;
+            min-height: 650px; /* Reduced for smaller components */
+            overflow: hidden;
+        }
+
+        .step-number {
+            color: #feca57;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 5px rgba(254, 202, 87, 0.3);
+        }
+
+        .step-title {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff9ff3, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        /* Photo and Navigation Layout - Centered Design */
+        .photo-nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            flex-wrap: nowrap;
+        }
+
+        /* Enhanced Photo Container - Centered and Smaller */
+        .photo-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 280px; /* Reduced from 320px */
+            height: 497px; /* Maintains 9:16 ratio (280 * 16/9) */
+            flex-shrink: 0;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Compact Side Navigation */
+        .side-navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px; /* Fixed smaller width */
+        }
+
+        .side-nav-btn {
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .side-nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .side-nav-btn:hover::before {
+            left: 100%;
+        }
+
+        .side-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .side-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .side-nav-btn:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Hidden navigation space for layout balance */
+        .nav-spacer {
+            width: 120px;
+            visibility: hidden;
+        }
+
+        .photo-container:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .photo-container:hover::before {
+            opacity: 1;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Perfect for 720x1280 photos */
+            object-position: center top; /* Shows the top portion (face area) first */
+            filter: brightness(1.1) contrast(1.1) saturate(1.2);
+            transition: all 0.4s ease;
+        }
+
+        .photo-container:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.2) contrast(1.2) saturate(1.3);
+        }
+
+        /* Enhanced Photo Placeholder - Updated for portrait */
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: rotate 10s linear infinite;
+        }
+
+        .photo-placeholder-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px 20px; /* Adjusted padding for portrait */
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            max-width: 80%; /* Responsive width */
+        }
+
+        /* Enhanced Message */
+        .step-message {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Enhanced Navigation */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .nav-btn {
+            padding: 18px 35px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Enhanced Celebration Button */
+        .celebrate-btn {
+            padding: 25px 50px;
+            background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #feca57);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.4);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: celebratePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes celebratePulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 20px 40px rgba(255, 107, 107, 0.4);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 25px 50px rgba(255, 107, 107, 0.6);
+            }
+        }
+
+        .celebrate-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .celebrate-btn:hover::before {
+            left: 100%;
+        }
+
+        .celebrate-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(255, 107, 107, 0.6);
+            animation: none;
+        }
+
+        /* Floating Particles */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 182, 193, 0.8);
+            animation: floatHeart 12s infinite linear;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) rotate(36deg) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) rotate(324deg) scale(1);
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile Responsive - Compact Design */
+        @media (max-width: 768px) {
+            .journey-card {
+                padding: 25px 15px;
+                margin: 10px;
+                border-radius: 25px;
+                transform: none;
+            }
+            
+            .journey-card:hover {
+                transform: translateY(-2px);
+            }
+            
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .step-title {
+                font-size: 1.8rem;
+            }
+            
+            .photo-nav-container {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            
+            .side-navigation {
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .side-nav-btn {
+                width: 100px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .photo-container {
+                width: 250px;
+                height: 444px;
+                order: -1;
+            }
+            
+            .nav-spacer {
+                display: none;
+            }
+            
+            .progress-container {
+                gap: 8px;
+                padding: 12px;
+            }
+
+            .progress-line {
+                width: 20px;
+            }
+
+            .steps-container {
+                min-height: 600px;
+            }
+
+            .step-message {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .photo-container {
+                width: 220px;
+                height: 391px;
+            }
+            
+            .journey-card {
+                padding: 20px 10px;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .step-title {
+                font-size: 1.6rem;
+            }
+            
+            .side-nav-btn {
+                width: 90px;
+                padding: 8px 12px;
+                font-size: 0.75rem;
+            }
+            
+            .photo-nav-container {
+                gap: 15px;
+            }
+        }
+
+        /* Smooth page transitions */
+        .page-transition {
+            opacity: 0;
+            animation: pageIn 1s ease forwards;
+        }
+
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+    </div>
+    
+    <div class="floating-hearts"></div>
+    
+    <div class="container page-transition">
+        <div class="journey-card">
+            <div class="header">
+                <h1 class="main-title">Happy Girlfriends Day! 💕</h1>
+                <p class="subtitle">Our Beautiful Journey Together</p>
+            </div>
+
+            <!-- Enhanced Progress Indicator -->
+            <div class="progress-container">
+                <div class="progress-dot active" onclick="goToStep(0)"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" onclick="goToStep(1)"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" onclick="goToStep(2)"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" onclick="goToStep(3)"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" onclick="goToStep(4)"></div>
+                <div class="progress-line"></div>
+                <div class="progress-dot" onclick="goToStep(5)"></div>
+            </div>
+
+            <!-- Steps Container for smooth transitions -->
+            <div class="steps-container">
+                <!-- Journey Step 1 -->
+                <div class="journey-step active" id="step-0">
+                    <div class="step-number">Chapter 1</div>
+                    <h2 class="step-title">Your Beautiful Smile ✨</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn" onclick="prevStep()" disabled>← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-smile.png" alt="Her beautiful smile" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    😊 Your Beautiful Smile 😊<br>
+                                    <small>Add: images/her-smile.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="nextBtn" onclick="nextStep()">Next →</button>
+                        </div>
+                    </div>
+                    <p class="step-message">
+                        Your smile is pure magic - it lights up every room you enter and makes my heart skip a beat every single time. 
+                        You have the most gorgeous, infectious smile that could brighten the darkest days. ✨
+                    </p>
+                </div>
+
+                <!-- Journey Step 2 -->
+                <div class="journey-step" id="step-1">
+                    <div class="step-number">Chapter 2</div>
+                    <h2 class="step-title">Your Stunning Beauty 💕</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn-1" onclick="prevStep()">← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-beauty.png" alt="Her stunning beauty" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    👑 Your Stunning Beauty 👑<br>
+                                    <small>Add: images/her-beauty.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="nextBtn-1" onclick="nextStep()">Next →</button>
+                        </div>
+                    </div>
+                    <p class="step-message">
+                        You are absolutely breathtaking - inside and out. Your beauty isn't just what I see, it's who you are. 
+                        Every time I look at you, I'm reminded how lucky I am to have such a gorgeous, amazing woman in my life. 💖
+                    </p>
+                </div>
+
+                <!-- Journey Step 3 -->
+                <div class="journey-step" id="step-2">
+                    <div class="step-number">Chapter 3</div>
+                    <h2 class="step-title">Your Amazing Style 🌟</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn-2" onclick="prevStep()">← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-style.png" alt="Her amazing style" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    💃 Your Amazing Style 💃<br>
+                                    <small>Add: images/her-style.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="nextBtn-2" onclick="nextStep()">Next →</button>
+                        </div>
+                    </div>
+                    <p class="step-message">
+                        You have incredible taste and style - everything you wear looks absolutely perfect on you. 
+                        You make fashion look effortless and always manage to take my breath away with how stunning you look. 🚀
+                    </p>
+                </div>
+
+                <!-- Journey Step 4 -->
+                <div class="journey-step" id="step-3">
+                    <div class="step-number">Chapter 4</div>
+                    <h2 class="step-title">Your Sweet Moments 🏠</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn-3" onclick="prevStep()">← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-candid.png" alt="Her sweet candid moments" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    🥰 Your Sweet Moments 🥰<br>
+                                    <small>Add: images/her-candid.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="nextBtn-3" onclick="nextStep()">Next →</button>
+                        </div>
+                    </div>
+                    <p class="step-message">
+                        I love capturing your natural, sweet moments - when you're being your authentic, beautiful self. 
+                        These candid moments show the real you, and that's when you're most beautiful to me. 🥰
+                    </p>
+                </div>
+
+                <!-- Journey Step 5 -->
+                <div class="journey-step" id="step-4">
+                    <div class="step-number">Chapter 5</div>
+                    <h2 class="step-title">Your Joyful Spirit 🎉</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn-4" onclick="prevStep()">← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-happiness.png" alt="Her joyful spirit" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    🎊 Your Joyful Spirit 🎊<br>
+                                    <small>Add: images/her-happiness.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="nextBtn-4" onclick="nextStep()">Next →</button>
+                        </div>
+                    </div>
+                    <p class="step-message">
+                        Your happiness is contagious - when you're excited and joyful, it fills my heart with so much love. 
+                        You bring so much light and positivity into everything you do and everyone around you. 🎊
+                    </p>
+                </div>
+
+                <!-- Journey Step 6 - Final Message -->
+                <div class="journey-step" id="step-5">
+                    <div class="step-number">Forever My Queen</div>
+                    <h2 class="step-title">You Are Perfect 💖</h2>
+                    <div class="photo-nav-container">
+                        <!-- Previous Button -->
+                        <div class="side-navigation">
+                            <button class="side-nav-btn" id="prevBtn-5" onclick="prevStep()">← Back</button>
+                        </div>
+
+                        <!-- Photo Container -->
+                        <div class="photo-container">
+                            <img src="images/her-perfect.png" alt="Her perfect self" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder" style="display: none;">
+                                <div class="photo-placeholder-content">
+                                    👸 You Are Perfect 👸<br>
+                                    <small>Add: images/her-perfect.png</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button Space (For Layout Balance) -->
+                        <div class="nav-spacer"></div>
+                    </div>
+                    <p class="step-message">
+                        My beautiful girlfriend, you are absolutely perfect in every way. Your beauty, your heart, your soul - everything about you amazes me daily. 
+                        Thank you for being the incredible woman you are and for letting me love you. 
+                        <strong>You are my everything, my queen, my heart! 💕</strong>
+                    </p>
+                    <button class="celebrate-btn" onclick="celebrate()">🎆 You're My Everything! 🎆</button>
+                </div>
+            </div>
+
+            <!-- Remove old navigation section -->
+            <!-- Navigation buttons are now beside each photo -->
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        const totalSteps = 6;
+
+        function showStep(stepIndex) {
+            // Add transition classes to all steps
+            document.querySelectorAll('.journey-step').forEach((step, index) => {
+                step.classList.remove('active', 'prev', 'next');
+                
+                if (index === stepIndex) {
+                    step.classList.add('active');
+                } else if (index < stepIndex) {
+                    step.classList.add('prev');
+                } else {
+                    step.classList.add('next');
+                }
+            });
+            
+            // Update progress dots and lines
+            const dots = document.querySelectorAll('.progress-dot');
+            const lines = document.querySelectorAll('.progress-line');
+            
+            dots.forEach((dot, index) => {
+                dot.classList.remove('active', 'completed');
+                if (index === stepIndex) {
+                    dot.classList.add('active');
+                } else if (index < stepIndex) {
+                    dot.classList.add('completed');
+                }
+            });
+
+            lines.forEach((line, index) => {
+                line.classList.remove('completed');
+                if (index < stepIndex) {
+                    setTimeout(() => {
+                        line.classList.add('completed');
+                    }, 300 + (index * 100));
+                }
+            });
+            
+            // Update side navigation buttons (they are now always visible beside photos)
+            // No need to update button text as they are fixed per step
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps - 1) {
+                currentStep++;
+                showStep(currentStep);
+                createStepTransitionEffect();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                showStep(currentStep);
+                createStepTransitionEffect();
+            }
+        }
+
+        function goToStep(stepIndex) {
+            if (stepIndex !== currentStep) {
+                currentStep = stepIndex;
+                showStep(currentStep);
+                createStepTransitionEffect();
+            }
+        }
+
+        function createStepTransitionEffect() {
+            // Create magical particles during transition
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    createTransitionParticle();
+                }, i * 50);
+            }
+        }
+
+        function createTransitionParticle() {
+            const particle = document.createElement('div');
+            const symbols = ['✨', '💫', '🌟', '💖', '💕'];
+            particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            particle.style.position = 'fixed';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.fontSize = (Math.random() * 15 + 15) + 'px';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '1000';
+            particle.style.opacity = '0';
+            
+            document.body.appendChild(particle);
+            
+            // Animate particle
+            const animation = particle.animate([
+                { 
+                    opacity: 0,
+                    transform: 'translate(0, 0) rotate(0deg) scale(0)' 
+                },
+                { 
+                    opacity: 1,
+                    transform: 'translate(0, -50px) rotate(180deg) scale(1)' 
+                },
+                { 
+                    opacity: 0,
+                    transform: 'translate(0, -100px) rotate(360deg) scale(0)' 
+                }
+            ], {
+                duration: 2000,
+                easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+            });
+            
+            animation.onfinish = () => particle.remove();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextStep();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevStep();
+            }
+        });
+
+        // Touch gestures for mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            // Only respond to horizontal swipes
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                if (deltaX > 0 && currentStep > 0) {
+                    prevStep();
+                } else if (deltaX < 0 && currentStep < totalSteps - 1) {
+                    nextStep();
+                }
+            }
+        });
+
+        // Epic celebration function
+        function celebrate() {
+            // Create massive confetti explosion
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    createAdvancedConfetti();
+                }, i * 30);
+            }
+            
+            // Create heart explosion from center
+            setTimeout(() => {
+                createHeartExplosion();
+            }, 500);
+            
+            // Create sparkle burst
+            setTimeout(() => {
+                createSparkleBurst();
+            }, 1000);
+            
+            // Show celebration modal
+            setTimeout(() => {
+                showCelebrationModal();
+            }, 2500);
+        }
+
+        function createAdvancedConfetti() {
+            const confetti = document.createElement('div');
+            const symbols = ['💕', '💖', '💗', '💝', '🌟', '✨', '🎉', '🎊', '💫', '🦋', '🌈', '💎', '👑', '🌹'];
+            const colors = ['#ff6b6b', '#feca57', '#48cae4', '#ff9ff3', '#54a0ff', '#5f27cd', '#23d5ab'];
+            
+            confetti.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.top = '-50px';
+            confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '10000';
+            confetti.style.textShadow = '0 0 10px currentColor';
+            
+            document.body.appendChild(confetti);
+            
+            const animation = confetti.animate([
+                { 
+                    transform: 'translateY(-50px) rotate(0deg) scale(0)', 
+                    opacity: 1 
+                },
+                { 
+                    transform: `translateY(${window.innerHeight / 2}px) rotate(${Math.random() * 360}deg) scale(1)`, 
+                    opacity: 1 
+                },
+                { 
+                    transform: `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg) scale(0.5)`, 
+                    opacity: 0 
+                }
+            ], {
+                duration: Math.random() * 4000 + 3000,
+                easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+            });
+            
+            animation.onfinish = () => confetti.remove();
+        }
+
+        function createHeartExplosion() {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '💕';
+                heart.style.position = 'fixed';
+                heart.style.left = centerX + 'px';
+                heart.style.top = centerY + 'px';
+                heart.style.fontSize = (Math.random() * 20 + 25) + 'px';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '10000';
+                heart.style.textShadow = '0 0 15px rgba(255, 107, 107, 0.8)';
+                
+                document.body.appendChild(heart);
+                
+                const angle = (i / 30) * Math.PI * 2;
+                const distance = 150 + Math.random() * 200;
+                const endX = centerX + Math.cos(angle) * distance;
+                const endY = centerY + Math.sin(angle) * distance;
+                
+                const animation = heart.animate([
+                    { 
+                        transform: 'translate(-50%, -50%) scale(0) rotate(0deg)', 
+                        opacity: 1 
+                    },
+                    { 
+                        transform: `translate(${endX - centerX}px, ${endY - centerY}px) scale(1.5) rotate(180deg)`, 
+                        opacity: 1 
+                    },
+                    { 
+                        transform: `translate(${endX - centerX + (Math.random() - 0.5) * 100}px, ${endY - centerY + 100}px) scale(0) rotate(360deg)`, 
+                        opacity: 0 
+                    }
+                ], {
+                    duration: 3000,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                });
+                
+                animation.onfinish = () => heart.remove();
+            }
+        }
+
+        function createSparkleBurst() {
+            for (let i = 0; i < 50; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                sparkle.style.fontSize = (Math.random() * 15 + 10) + 'px';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.zIndex = '10000';
+                sparkle.style.filter = 'brightness(1.5)';
+                
+                document.body.appendChild(sparkle);
+                
+                const animation = sparkle.animate([
+                    { 
+                        opacity: 0,
+                        transform: 'scale(0) rotate(0deg)' 
+                    },
+                    { 
+                        opacity: 1,
+                        transform: 'scale(1.5) rotate(180deg)' 
+                    },
+                    { 
+                        opacity: 0,
+                        transform: 'scale(0) rotate(360deg)' 
+                    }
+                ], {
+                    duration: 2000,
+                    easing: 'ease-out'
+                });
+                
+                animation.onfinish = () => sparkle.remove();
+            }
+        }
+
+        function showCelebrationModal() {
+            const modal = document.createElement('div');
+            modal.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    backdrop-filter: blur(20px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10001;
+                    animation: modalFadeIn 0.8s ease-out;
+                ">
+                    <div style="
+                        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                        backdrop-filter: blur(30px);
+                        border-radius: 30px;
+                        padding: 60px;
+                        text-align: center;
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+                        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.3);
+                        max-width: 500px;
+                        margin: 20px;
+                        position: relative;
+                        overflow: hidden;
+                    ">
+                        <div style="
+                            position: absolute;
+                            top: -50%;
+                            left: -50%;
+                            width: 200%;
+                            height: 200%;
+                            background: conic-gradient(from 0deg, transparent, rgba(255, 107, 107, 0.1), transparent, rgba(255, 159, 243, 0.1), transparent);
+                            animation: rotate 10s linear infinite;
+                            z-index: -1;
+                        "></div>
+                        <h2 style="
+                            font-size: 3rem; 
+                            margin-bottom: 30px; 
+                            background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #feca57);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            font-weight: 700;
+                            text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+                        ">
+                            Happy Girlfriends Day! 💕
+                        </h2>
+                        <p style="
+                            font-size: 1.4rem; 
+                            line-height: 1.6; 
+                            margin-bottom: 40px;
+                            color: rgba(255, 255, 255, 0.9);
+                            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                        ">
+                            You mean absolutely everything to me, beautiful! ✨<br>
+                            Thank you for being my sunshine every single day! 🌟
+                        </p>
+                        <button onclick="this.closest('div').parentElement.remove()" style="
+                            padding: 20px 40px;
+                            background: linear-gradient(45deg, #ff6b6b, #ff9ff3);
+                            color: white;
+                            border: none;
+                            border-radius: 50px;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        " 
+                        onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 40px rgba(255, 107, 107, 0.6)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 30px rgba(255, 107, 107, 0.4)'">
+                            I Love You Too! 💖
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes modalFadeIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.8);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(modal);
+        }
+
+        // Create floating hearts continuously
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            const hearts = ['💕', '💖', '💗', '💝'];
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 8 + 8) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.querySelector('.floating-hearts').appendChild(heart);
+
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, 12000);
+        }
+
+        // Auto-advance feature (optional - can be enabled)
+        let autoAdvanceInterval;
+        
+        function startAutoAdvance() {
+            autoAdvanceInterval = setInterval(() => {
+                if (currentStep < totalSteps - 1) {
+                    nextStep();
+                } else {
+                    stopAutoAdvance();
+                }
+            }, 8000); // Auto advance every 8 seconds
+        }
+        
+        function stopAutoAdvance() {
+            if (autoAdvanceInterval) {
+                clearInterval(autoAdvanceInterval);
+            }
+        }
+        
+        // Stop auto-advance when user interacts
+        document.addEventListener('click', stopAutoAdvance);
+        document.addEventListener('keydown', stopAutoAdvance);
+        document.addEventListener('touchstart', stopAutoAdvance);
+
+        // Initialize everything
+        setInterval(createFloatingHeart, 1000);
+        showStep(0);
+        
+        // Optional: Uncomment to enable auto-advance
+        // setTimeout(startAutoAdvance, 5000); // Start auto-advance after 5 seconds
+
+        // Add some easter eggs
+        let clickCount = 0;
+        document.querySelector('.main-title').addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                createHeartExplosion();
+                clickCount = 0;
+            }
+        });
+
+        // Konami code easter egg (↑↑↓↓←→←→BA)
+        let konamiCode = [];
+        const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.code);
+            if (konamiCode.length > konami.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.join(',') === konami.join(',')) {
+                // Secret rainbow mode
+                document.body.style.filter = 'hue-rotate(0deg)';
+                let hue = 0;
+                const rainbowInterval = setInterval(() => {
+                    hue += 5;
+                    document.body.style.filter = `hue-rotate(${hue}deg)`;
+                    if (hue >= 360) {
+                        clearInterval(rainbowInterval);
+                        document.body.style.filter = 'none';
+                    }
+                }, 50);
+                konamiCode = [];
+            }
+        });
+    </script>
+</body>
+</html>
